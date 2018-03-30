@@ -1,0 +1,40 @@
+{
+  "name": "electron-rekit",
+  "productName": "Rekit",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "build": {
+    "compression": "normal",
+    "appId": "com.webows.rekit",
+    "dmg": {
+      "icon": "build/icon.icns"
+    },
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": "dmg",
+      "identity": "Pei Wang (ZUQ2GPKPP2)"
+    }
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-builder": "^20.8.1"
+  },
+  "dependencies": {
+  }
+}

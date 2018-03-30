@@ -1,0 +1,169 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+  height: 100%;
+  background-color: rgba(200,200,200,1);
+}
+
+#wv-container {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+webview {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(200,200,200,1);
+}
+
+#toolbar {
+  background: rgb(238,238,238);
+  background: linear-gradient(0deg, rgba(200,200,200,1) 0%, rgba(238,238,238,1) 100%, rgba(0,212,255,1) 100%);
+  border-bottom: 1px solid #ddd;
+}
+#tabs {
+  height: 36px;
+  position: relative;
+}
+
+.tab-item {
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 36px;
+  padding: 0 10px;
+  border-right: 1px solid #999;
+  color: #555;
+  font-size: 13px;
+  cursor: pointer;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.tab-item label {
+  cursor: pointer;
+  white-space: nowrap;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+}
+
+.tab-item .icon-close {
+  float: right;
+  font-size: 10px;
+  margin-left: 8px;
+  margin-right: 0px;
+}
+.tab-item .icon-refresh:hover,
+.tab-item .icon-close:hover {
+  color: #4FC3F7;
+}
+
+.tab-item.add-tab {
+  font-size: 12px;
+  border-right: none;
+  
+}
+.tab-item.add-tab > span {
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.tab-item.active {
+  background-color: #999;
+  color: #fff;
+}
+
+.tab-item .menu-history {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 36px;
+  left: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 0;
+}
+
+.tab-item:hover .menu-history {
+  display: block;
+}
+.menu-history, .menu-history li {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 500px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-history li {
+  color: #666;
+  padding: 0px 10px;
+  line-height: 30px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu-history li:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-history li .title {
+  color: #2175bc;
+}
+
+.dialog-mask {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dialog {
+  position: relative;
+  width: 400px;
+  margin: 100px auto 0;
+  /* box-shadow: 0 0 8px 2px #aaa; */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 36px;
+  border-radius: 5px;
+}
+.dialog .icon-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+}
+.dialog .icon-close:hover {
+  color: red;
+}
+
+.dialog-prompt input {
+  width: calc(100% - 36px);
+  padding: 5px 10px;
+  color: #777;
+  font-size: 14px;
+}
+.dialog-prompt .msg {
+  color: #555;
+  padding: 8px 0;
+}
+
+
+
